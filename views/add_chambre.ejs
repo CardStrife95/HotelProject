@@ -1,0 +1,26 @@
+<%- include ./layouts/header.ejs %>
+<div class="page_data">
+	<form method="post" action="/chambre/add">
+		<legend>Ajout d'une chambre</legend>
+		<table border="1">
+			<tr>
+				<td>Numéro de la chambre</td>
+				<td><input type="number" name="numeroChambre" /></td>
+			</tr>
+			<tr>
+				<td>Type de la chambre</td>
+				<td><input type="text" name="typeChambre" /></td>
+			</tr>
+			<tr>
+				<td>Taille de la chambre</td>
+				<td><input type="text" name="tailleChambre" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="save" value="Enregistrer" /></td>
+				<td><input type="button" name="cancel" value="Annuler" class="cancel"
+					onClick="cancelChambre()"></td>
+			</tr>
+		</table>
+	</form>
+</div>
+<%- include ./layouts/footer.ejs %>

@@ -1,0 +1,28 @@
+<%- include layouts/header.ejs %>
+<div class="page-data">
+	<form method="post" action="/client/edit/<%=data[0].idClient%>">
+		<table cellpadding="11">
+			<tr>
+				<td>Nom du Client :</td>
+				<td><input type="text" name="name"
+					value="<%=data[0].NomClient%>" required></td>
+			</tr>
+			<tr>
+				<td valign="top">Adresse du Client :</td>
+				<td valign="top"><textarea name="address" required cols="30"
+						rows="5"><%=data[0].AdresseClient%></textarea></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;<input type="submit" name="submit" value="Save">
+					<input type="button" name="cancel" value="Cancel" class="cancel"
+					onClick="cancelClient()">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+</div>
+
+
+<%- include layouts/footer.ejs %>

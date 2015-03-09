@@ -1,0 +1,35 @@
+<%- include layouts/header.ejs %>
+<div class="page-data">
+	<div class="data-btn">
+		<button onClick="addChambre();">+ Ajouter</button>
+	</div>
+	<div class="data-table">
+		<table border="1" cellpadding="7" cellspacing="7">
+			<tr>
+				<th width="50px">No</th>
+				<th>Numéro de Chambre</th>
+				<th>Type de chambre</th>
+				<th>Taille de la chambre</th>
+				<th width="120px">Action</th>
+			</tr>
+			<% if(data.length){ for(var i = 0;i < data.length;i++) { %>
+
+			<tr>
+				<td><%=data[i].idChambre%></td>
+				<td><%=data[i].numeroChambre%></td>
+				<td><%=data[i].typeChambre%></td>
+				<td><%=data[i].tailleChambre %></td>
+				<td><a class="a-inside edit"
+					href="../chambre/edit/<%=data[i].idChambre%>">Edit</a> <a
+					class="a-inside delete"
+					href="../chambre/delete/<%=data[i].idChambre%>">Delete</a></td>
+			</tr>
+			<% } }else{ %>
+			<tr>
+				<td colspan="5" style="text-alignment:center;">Pas de chambres</td>
+			</tr>
+			<% } %>
+		</table>
+	</div>
+</div>
+<%- include layouts/footer.ejs %>

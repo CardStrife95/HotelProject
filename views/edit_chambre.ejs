@@ -1,0 +1,35 @@
+<%- include layouts/header.ejs %>
+<div class="page-data">
+	<form method="post" action="/chambre/edit/<%=data[0].idChambre%>">
+		<table cellpadding="11">
+			<tr>
+				<td>Numéro de la Chambre :</td>
+				<td><input type="text" name="numeroChambre"
+					value="<%=data[0].numeroChambre%>" required></td>
+			</tr>
+			<tr>
+				<td valign="top">Type de La Chambre :</td>
+				<td><input type="text" name="typeChambre"
+					value="<%=data[0].typeChambre%>" required></td>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">Taille de la Chambre :</td>
+				<td><input type="text" name="tailleChambre"
+					value="<%=data[0].tailleChambre%>" required></td>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp; <input type="submit" name="submit" value="Modifier">
+					<input type="button" name="cancel" value="Annuler" class="cancel"
+					onClick="cancelChambre()">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+</div>
+
+
+<%- include layouts/footer.ejs %>

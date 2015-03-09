@@ -1,0 +1,27 @@
+ï»¿<% include layouts/header.ejs %>
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Bienvenue sur l'application de l'Hotel!</h1>
+			<p>Cet application permet de gerer les clients , les réservations
+				et les chambres. Chaque gestion est gérée par des créations , des
+				suppressions , des modifications et lister les tables à partir de la
+				base de données.</p>
+
+		</div>
+	</div>
+	<!-- /container -->
+	<script type="text/javascript">
+        $(document).ready(function() {
+            $('#home').addClass("active");
+        });
+    </script>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<%- include layouts/footer.ejs %>

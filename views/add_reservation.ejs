@@ -1,0 +1,38 @@
+<%- include layouts/header.ejs %>
+<div class="page_data">
+	<form method="post" action="/reservation/add">
+		<fieldset>
+			<legend>Ajout d'une réservation</legend>
+			<table>
+				<tr>
+					<td>Numéro de la réservation :</td>
+					<td><input type="text" name="numero" /></td>
+				</tr>
+				<tr>
+					<td>Client :</td>
+					<td><select name="Client">
+					<% if(data.length){
+					 for(var i = 0;i < data.length;i++) { %>
+						<option value="<%=data[i].idClient %>"><%=data[i].NomClient %></option>
+					<% }}%>
+					</select></td>
+
+				</tr>
+				<tr>
+					<td>Date de début</td>
+					<td><input type="date" name="dateDebut" /></td>
+				</tr>
+				<tr>
+					<td>Date de fin</td>
+					<td><input type="date" name="dateFin" /></td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="save" value="Enregistrer" /></td>
+					<td><input type="button" name="cancel" value="Annuler"
+						class="cancel" onClick="cancelReservation()"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</div>
+<%- include layouts/footer.ejs %>
